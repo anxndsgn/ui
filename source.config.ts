@@ -1,0 +1,26 @@
+import { rehypeHighlightCodeBlocks } from "@tanstack/highlight/rehype";
+import { metaSchema, pageSchema } from "fumadocs-core/source/schema";
+import { defineConfig, defineDocs } from "fumadocs-mdx/config";
+import { z } from "zod";
+import { highlighter } from "./src/lib/highlight";
+
+export const docs = defineDocs({
+  dir: "content/docs",
+  docs: {
+    schema: pageSchema.extend({
+      description: z.string().optional(),
+      component: z.string().optional(),
+      registry: z.string().optional(),
+    }),
+  },
+  meta: {
+    schema: metaSchema,
+  },
+});
+
+export default defineConfig({
+  mdxOptions: {
+    rehypeCodeOptions: false,
+    rehypePlugins: [[rehypeHighlightCodeBlocks, { highlighter }]],
+  },
+});
