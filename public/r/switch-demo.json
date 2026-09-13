@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-demo",
+  "title": "Switch Demo",
+  "description": "A small usage example for the switch primitive.",
+  "registryDependencies": [
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/switch-demo.tsx",
+      "content": "import { Switch } from \"../ui/switch\";\n\nexport function SwitchDemo() {\n  return (\n    <div className=\"grid gap-3 text-sm\">\n      <div className=\"flex items-center gap-2\">\n        <Switch id=\"airplane-mode\" defaultChecked />\n        <label htmlFor=\"airplane-mode\">Airplane mode</label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <Switch id=\"reduce-motion\" size=\"sm\" />\n        <label htmlFor=\"reduce-motion\">Reduce motion</label>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/switch-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

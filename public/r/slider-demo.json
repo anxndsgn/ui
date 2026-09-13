@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-demo",
+  "title": "Slider Demo",
+  "description": "A small usage example for the slider primitive.",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/slider-demo.tsx",
+      "content": "import { Slider } from \"../ui/slider\";\n\nexport function SliderDemo() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-6\">\n      <Slider defaultValue={40} aria-label=\"Opacity\" />\n      <Slider defaultValue={[20, 70]} aria-label=\"Price range\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

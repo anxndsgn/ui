@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-demo",
+  "title": "Card Demo",
+  "description": "A small usage example for the card primitive.",
+  "registryDependencies": [
+    "card",
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/card-demo.tsx",
+      "content": "import { Button } from \"../ui/button\";\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"../ui/card\";\nimport { Input } from \"../ui/input\";\n\nexport function CardDemo() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Create project</CardTitle>\n        <CardDescription>Deploy your new project in one click.</CardDescription>\n        <CardAction>\n          <Button variant=\"ghost\" size=\"sm\">\n            Docs\n          </Button>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"grid gap-2\">\n        <Input placeholder=\"Project name\" />\n        <Input placeholder=\"https://example.com\" />\n      </CardContent>\n      <CardFooter className=\"justify-end gap-2\">\n        <Button variant=\"outline\">Cancel</Button>\n        <Button>Deploy</Button>\n      </CardFooter>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

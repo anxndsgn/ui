@@ -1,0 +1,53 @@
+---
+title: Dialog
+description: A modal window with overlay, header, footer, and close affordances.
+component: Dialog
+registry: dialog
+---
+
+import { DialogDemo } from "registry/default/examples/dialog-demo";
+import dialogDemoSource from "registry/default/examples/dialog-demo.tsx?raw";
+import DialogSource from "registry/default/ui/dialog.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="dialog-demo">
+    <DialogDemo />
+  </ComponentPreview>
+  <ComponentSource code={dialogDemoSource} language="tsx" title="dialog-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/dialog.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/dialog.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/dialog.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={DialogSource} language="tsx" title="dialog.tsx" />
+
+## Props
+
+### DialogContent
+
+| Prop              | Type      | Default | Description                              |
+| ----------------- | --------- | ------- | ---------------------------------------- |
+| `showCloseButton` | `boolean` | `true`  | Renders the top-right close button.      |
+| `overlayProps`    | `object`  | -       | Props forwarded to the backdrop element. |
+| `className`       | `string`  | -       | Adds custom classes to the dialog popup. |
+
+### DialogFooter
+
+| Prop              | Type      | Default | Description                      |
+| ----------------- | --------- | ------- | -------------------------------- |
+| `showCloseButton` | `boolean` | `false` | Appends an outline close button. |

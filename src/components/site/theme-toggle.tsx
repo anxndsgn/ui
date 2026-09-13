@@ -1,6 +1,6 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
+import { RiMoonLine, RiSunLine } from "@remixicon/react";
 import { useEffect } from "react";
 import { Button } from "registry/default/ui/button";
 import { applyTheme, getAppliedTheme, getSystemTheme } from "../../lib/theme";
@@ -57,7 +57,7 @@ export function ThemeToggle() {
         setTheme(nextTheme);
       }}
     >
-      <Sun
+      <RiSunLine
         className={cn(
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-[opacity,rotate,scale] duration-200 ease-[cubic-bezier(0.2,0,0,1)]",
           !isDark && "scale-50 rotate-45 opacity-0",
@@ -65,7 +65,7 @@ export function ThemeToggle() {
         size={17}
         aria-hidden="true"
       />
-      <Moon
+      <RiMoonLine
         className={cn(
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-[opacity,rotate,scale] duration-200 ease-[cubic-bezier(0.2,0,0,1)]",
           isDark && "scale-50 -rotate-45 opacity-0",

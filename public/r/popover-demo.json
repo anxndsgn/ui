@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover-demo",
+  "title": "Popover Demo",
+  "description": "A small usage example for the popover primitive.",
+  "registryDependencies": [
+    "popover",
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/popover-demo.tsx",
+      "content": "import { Button } from \"../ui/button\";\nimport { Input } from \"../ui/input\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"../ui/popover\";\n\nexport function PopoverDemo() {\n  return (\n    <Popover>\n      <PopoverTrigger render={<Button variant=\"outline\">Open popover</Button>} />\n      <PopoverContent className=\"grid gap-3\">\n        <PopoverTitle>Dimensions</PopoverTitle>\n        <PopoverDescription>Set the dimensions for the layer.</PopoverDescription>\n        <div className=\"grid gap-2\">\n          <Input placeholder=\"Width\" />\n          <Input placeholder=\"Height\" />\n        </div>\n      </PopoverContent>\n    </Popover>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/popover-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

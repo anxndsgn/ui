@@ -1,7 +1,7 @@
 import { Drawer } from "@base-ui/react/drawer";
 import { Link, Outlet, createFileRoute, useRouterState } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
-import { ChevronRightIcon, XIcon } from "lucide-react";
+import { RiArrowRightSLine, RiCloseLine } from "@remixicon/react";
 import { useEffect, useState, type ReactNode } from "react";
 import { buttonVariants } from "registry/default/ui/button";
 import { ScrollArea } from "registry/default/ui/scroll-area";
@@ -64,7 +64,7 @@ function DocsMobileNav({ navTree, currentUrl }: { navTree: DocsNavTree; currentU
                   })}
                   aria-label="Close documentation navigation"
                 >
-                  <XIcon size={18} aria-hidden="true" />
+                  <RiCloseLine size={18} aria-hidden="true" />
                 </Drawer.Close>
               </div>
               <nav className="grid content-start gap-1 overflow-auto p-3" aria-label="Docs pages">
@@ -172,7 +172,7 @@ function DocsSidebarFolder({
         aria-expanded={isExpanded}
         onClick={toggleFolder}
       >
-        <ChevronRightIcon
+        <RiArrowRightSLine
           size={16}
           className="transition-transform duration-150 data-[expanded=true]:rotate-90"
           data-expanded={isExpanded}
@@ -188,7 +188,7 @@ function DocsSidebarFolder({
       onClick={toggleFolder}
     >
       <span className="truncate">{node.title}</span>
-      <ChevronRightIcon
+      <RiArrowRightSLine
         size={16}
         className="flex-none transition-transform duration-150 data-[expanded=true]:rotate-90"
         data-expanded={isExpanded}

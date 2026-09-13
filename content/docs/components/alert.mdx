@@ -1,0 +1,44 @@
+---
+title: Alert
+description: A callout for displaying short messages with default, warning, and destructive variants.
+component: Alert
+registry: alert
+---
+
+import { AlertDemo } from "registry/default/examples/alert-demo";
+import alertDemoSource from "registry/default/examples/alert-demo.tsx?raw";
+import AlertSource from "registry/default/ui/alert.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="alert-demo">
+    <AlertDemo />
+  </ComponentPreview>
+  <ComponentSource code={alertDemoSource} language="tsx" title="alert-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/alert.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/alert.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/alert.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={AlertSource} language="tsx" title="alert.tsx" />
+
+## Props
+
+| Prop        | Type                                      | Default     | Description                                 |
+| ----------- | ----------------------------------------- | ----------- | ------------------------------------------- |
+| `variant`   | `"default" \| "warning" \| "destructive"` | `"default"` | Controls the tone of the callout.           |
+| `className` | `string`                                  | -           | Adds custom classes to the alert container. |

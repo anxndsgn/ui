@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu-demo",
+  "title": "Context Menu Demo",
+  "description": "A small usage example for the context menu primitive.",
+  "registryDependencies": [
+    "context-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/context-menu-demo.tsx",
+      "content": "import {\n  ContextMenu,\n  ContextMenuContent,\n  ContextMenuItem,\n  ContextMenuSeparator,\n  ContextMenuShortcut,\n  ContextMenuTrigger,\n} from \"../ui/context-menu\";\n\nexport function ContextMenuDemo() {\n  return (\n    <ContextMenu>\n      <ContextMenuTrigger className=\"flex h-32 w-64 items-center justify-center rounded-lg border border-dashed border-border text-sm text-muted-foreground\">\n        Right click here\n      </ContextMenuTrigger>\n      <ContextMenuContent className=\"w-48\">\n        <ContextMenuItem>\n          Back\n          <ContextMenuShortcut>⌘[</ContextMenuShortcut>\n        </ContextMenuItem>\n        <ContextMenuItem>\n          Forward\n          <ContextMenuShortcut>⌘]</ContextMenuShortcut>\n        </ContextMenuItem>\n        <ContextMenuSeparator />\n        <ContextMenuItem>\n          Copy\n          <ContextMenuShortcut>⌘C</ContextMenuShortcut>\n        </ContextMenuItem>\n        <ContextMenuItem>\n          Paste\n          <ContextMenuShortcut>⌘V</ContextMenuShortcut>\n        </ContextMenuItem>\n      </ContextMenuContent>\n    </ContextMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/context-menu-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

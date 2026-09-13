@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-demo",
+  "title": "Kbd Demo",
+  "description": "A small usage example for the kbd primitive.",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/kbd-demo.tsx",
+      "content": "import { Kbd, KbdGroup } from \"../ui/kbd\";\n\nexport function KbdDemo() {\n  return (\n    <div className=\"flex flex-col items-center gap-4 text-sm\">\n      <div className=\"flex items-center gap-2\">\n        <Kbd>⌘</Kbd>\n        <Kbd>K</Kbd>\n      </div>\n      <KbdGroup>\n        <Kbd>Ctrl</Kbd>\n        <span className=\"text-muted-foreground\">+</span>\n        <Kbd>Shift</Kbd>\n        <span className=\"text-muted-foreground\">+</span>\n        <Kbd>P</Kbd>\n      </KbdGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/kbd-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

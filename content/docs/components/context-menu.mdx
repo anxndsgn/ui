@@ -1,0 +1,49 @@
+---
+title: Context Menu
+description: A menu that appears on right click with items, groups, and submenus.
+component: ContextMenu
+registry: context-menu
+---
+
+import { ContextMenuDemo } from "registry/default/examples/context-menu-demo";
+import contextMenuDemoSource from "registry/default/examples/context-menu-demo.tsx?raw";
+import ContextMenuSource from "registry/default/ui/context-menu.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="context-menu-demo">
+    <ContextMenuDemo />
+  </ComponentPreview>
+  <ComponentSource code={contextMenuDemoSource} language="tsx" title="context-menu-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/context-menu.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/context-menu.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/context-menu.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={ContextMenuSource} language="tsx" title="context-menu.tsx" />
+
+## Props
+
+### ContextMenuContent
+
+| Prop          | Type                                     | Default   | Description                            |
+| ------------- | ---------------------------------------- | --------- | -------------------------------------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"` | `"right"` | Preferred side of the cursor.          |
+| `align`       | `"start" \| "center" \| "end"`           | `"start"` | Alignment along the chosen side.       |
+| `sideOffset`  | `number`                                 | `0`       | Pixel offset from the cursor.          |
+| `alignOffset` | `number`                                 | `4`       | Pixel offset along the alignment axis. |
+| `className`   | `string`                                 | -         | Adds custom classes to the popup.      |

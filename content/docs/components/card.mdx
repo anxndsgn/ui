@@ -1,0 +1,44 @@
+---
+title: Card
+description: A surface with header, content, and footer regions for grouping related content.
+component: Card
+registry: card
+---
+
+import { CardDemo } from "registry/default/examples/card-demo";
+import cardDemoSource from "registry/default/examples/card-demo.tsx?raw";
+import CardSource from "registry/default/ui/card.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="card-demo">
+    <CardDemo />
+  </ComponentPreview>
+  <ComponentSource code={cardDemoSource} language="tsx" title="card-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/card.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/card.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/card.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={CardSource} language="tsx" title="card.tsx" />
+
+## Props
+
+| Prop        | Type                | Default     | Description                                |
+| ----------- | ------------------- | ----------- | ------------------------------------------ |
+| `size`      | `"default" \| "sm"` | `"default"` | Tightens padding and title size.           |
+| `className` | `string`            | -           | Adds custom classes to the card container. |

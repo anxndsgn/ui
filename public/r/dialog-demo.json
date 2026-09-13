@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-demo",
+  "title": "Dialog Demo",
+  "description": "A small usage example for the dialog primitive.",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/dialog-demo.tsx",
+      "content": "import { Button } from \"../ui/button\";\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"../ui/dialog\";\nimport { Input } from \"../ui/input\";\n\nexport function DialogDemo() {\n  return (\n    <Dialog>\n      <DialogTrigger render={<Button variant=\"outline\">Edit profile</Button>} />\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Edit profile</DialogTitle>\n          <DialogDescription>\n            Make changes to your profile here. Click save when you are done.\n          </DialogDescription>\n        </DialogHeader>\n        <div className=\"grid gap-2\">\n          <Input defaultValue=\"Ada Lovelace\" />\n          <Input defaultValue=\"ada@example.com\" />\n        </div>\n        <DialogFooter showCloseButton>\n          <Button>Save changes</Button>\n        </DialogFooter>\n      </DialogContent>\n    </Dialog>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dialog-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

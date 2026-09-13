@@ -1,5 +1,5 @@
-import { Tabs } from "@base-ui/react/tabs";
 import { Children, isValidElement, useMemo, type ReactElement, type ReactNode } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "registry/default/ui/tabs";
 import { highlightCodeToHtml } from "../../lib/highlight";
 import { defaultPackageManager, useUiStore } from "../../lib/ui-store";
 import { cn } from "../../lib/utils";
@@ -48,41 +48,28 @@ function CodeSnippetRoot({
   }
 
   return (
-    <Tabs.Root
+    <Tabs
+      className={cn("w-full items-stretch gap-1.5 rounded-lg text-foreground", className)}
       value={activeValue}
       onValueChange={(value) => {
         if (typeof value === "string") {
           setPackageManager(value);
         }
       }}
-      className={cn(
-        "flex w-full items-center gap-1.5 text-foreground max-md:justify-between",
-        "flex-col items-stretch justify-start gap-1.5 rounded-lg max-md:justify-start",
-        className,
-      )}
     >
-      <Tabs.List
-        className="inline-flex w-fit max-w-full gap-0.5 self-start rounded-md bg-muted p-0.5"
-        aria-label="Package manager"
-      >
+      <TabsList aria-label="Package manager" className="max-w-full self-start">
         {slots.map((slot) => (
-          <Tabs.Tab
-            key={slot.value}
-            value={slot.value}
-            className={
-              "min-h-8 w-fit rounded-sm bg-transparent px-3 text-xs text-foreground/65 hover:bg-transparent hover:text-foreground data-active:bg-background data-active:font-semibold data-active:text-foreground data-active:shadow-sm"
-            }
-          >
+          <TabsTrigger key={slot.value} className="text-xs" value={slot.value}>
             {slot.value}
-          </Tabs.Tab>
+          </TabsTrigger>
         ))}
-      </Tabs.List>
+      </TabsList>
       {slots.map((slot) => (
-        <Tabs.Panel key={slot.value} value={slot.value} className="min-h-10 data-hidden:hidden">
+        <TabsContent key={slot.value} className="min-h-10 text-base" value={slot.value}>
           <CodeSnippetCommandLine command={slot.command} hasTabs />
-        </Tabs.Panel>
+        </TabsContent>
       ))}
-    </Tabs.Root>
+    </Tabs>
   );
 }
 

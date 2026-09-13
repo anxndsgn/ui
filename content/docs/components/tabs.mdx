@@ -1,0 +1,54 @@
+---
+title: Tabs
+description: Tabs with default and line variants, an animated indicator, and content panels.
+component: Tabs
+registry: tabs
+---
+
+import { TabsDemo } from "registry/default/examples/tabs-demo";
+import tabsDemoSource from "registry/default/examples/tabs-demo.tsx?raw";
+import TabsSource from "registry/default/ui/tabs.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="tabs-demo">
+    <TabsDemo />
+  </ComponentPreview>
+  <ComponentSource code={tabsDemoSource} language="tsx" title="tabs-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/tabs.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/tabs.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/tabs.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={TabsSource} language="tsx" title="tabs.tsx" />
+
+## Props
+
+### TabsList
+
+| Prop        | Type                                | Default     | Description                       |
+| ----------- | ----------------------------------- | ----------- | --------------------------------- |
+| `variant`   | `"default" \| "line"`               | `"default"` | Visual treatment of the tab list. |
+| `size`      | `"xs" \| "sm" \| "default" \| "lg"` | `"default"` | Height and text size.             |
+| `className` | `string`                            | -           | Adds custom classes to the list.  |
+
+### TabsTrigger
+
+| Prop        | Type     | Default | Description                              |
+| ----------- | -------- | ------- | ---------------------------------------- |
+| `value`     | `string` | -       | Value that activates the matching panel. |
+| `className` | `string` | -       | Adds custom classes to the trigger.      |

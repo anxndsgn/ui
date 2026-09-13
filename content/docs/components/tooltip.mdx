@@ -1,0 +1,54 @@
+---
+title: Tooltip
+description: A hover label anchored to a trigger, with provider, viewport, and arrow primitives.
+component: Tooltip
+registry: tooltip
+---
+
+import { TooltipDemo } from "registry/default/examples/tooltip-demo";
+import tooltipDemoSource from "registry/default/examples/tooltip-demo.tsx?raw";
+import TooltipSource from "registry/default/ui/tooltip.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="tooltip-demo">
+    <TooltipDemo />
+  </ComponentPreview>
+  <ComponentSource code={tooltipDemoSource} language="tsx" title="tooltip-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/tooltip.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/tooltip.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/tooltip.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={TooltipSource} language="tsx" title="tooltip.tsx" />
+
+## Props
+
+### TooltipProvider
+
+| Prop    | Type     | Default | Description                           |
+| ------- | -------- | ------- | ------------------------------------- |
+| `delay` | `number` | `200`   | Delay in milliseconds before showing. |
+
+### TooltipContent
+
+| Prop         | Type                                     | Default    | Description                        |
+| ------------ | ---------------------------------------- | ---------- | ---------------------------------- |
+| `side`       | `"top" \| "bottom" \| "left" \| "right"` | `"top"`    | Preferred side of the trigger.     |
+| `sideOffset` | `number`                                 | `4`        | Pixel offset from the trigger.     |
+| `align`      | `"start" \| "center" \| "end"`           | `"center"` | Alignment relative to the trigger. |
+| `className`  | `string`                                 | -          | Adds custom classes to the popup.  |

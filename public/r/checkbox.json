@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "title": "Checkbox",
+  "description": "A control for toggling a single boolean value.",
+  "dependencies": [
+    "@base-ui/react/checkbox",
+    "@remixicon/react"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/checkbox.tsx",
+      "content": "import { Checkbox as CheckboxPrimitive } from \"@base-ui/react/checkbox\";\nimport { RiCheckLine } from \"@remixicon/react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {\n  return (\n    <CheckboxPrimitive.Root\n      data-slot=\"checkbox\"\n      className={cn(\n        \"inline-flex size-4 shrink-0 cursor-pointer items-center justify-center rounded-sm border border-input bg-background text-primary-foreground outline-none not-disabled:inset-shadow-[0_0.4px_0_--theme(--color-white/12%)] not-data-checked:inset-shadow-xs focus-visible:ring-3 focus-visible:ring-ring/30 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-checked:border-black/10 data-checked:bg-primary\",\n        className,\n      )}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator\n        data-slot=\"checkbox-indicator\"\n        className=\"flex items-center justify-center\"\n      >\n        <RiCheckLine className=\"size-3.5\" />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  );\n}\n\nexport { Checkbox };\n",
+      "type": "registry:ui",
+      "target": "components/ui/checkbox.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

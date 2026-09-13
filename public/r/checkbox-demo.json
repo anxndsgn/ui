@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-demo",
+  "title": "Checkbox Demo",
+  "description": "A small usage example for the checkbox primitive.",
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/checkbox-demo.tsx",
+      "content": "import * as React from \"react\";\n\nimport { Checkbox } from \"../ui/checkbox\";\n\nexport function CheckboxDemo() {\n  const [checked, setChecked] = React.useState(true);\n\n  return (\n    <div className=\"flex items-center gap-2 text-sm\">\n      <Checkbox\n        id=\"terms\"\n        checked={checked}\n        onCheckedChange={(value) => setChecked(value === true)}\n      />\n      <label htmlFor=\"terms\">Accept terms and conditions</label>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

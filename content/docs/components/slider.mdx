@@ -1,0 +1,47 @@
+---
+title: Slider
+description: A draggable control for choosing one or more values in a range.
+component: Slider
+registry: slider
+---
+
+import { SliderDemo } from "registry/default/examples/slider-demo";
+import sliderDemoSource from "registry/default/examples/slider-demo.tsx?raw";
+import SliderSource from "registry/default/ui/slider.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="slider-demo">
+    <SliderDemo />
+  </ComponentPreview>
+  <ComponentSource code={sliderDemoSource} language="tsx" title="slider-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/slider.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/slider.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/slider.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={SliderSource} language="tsx" title="slider.tsx" />
+
+## Props
+
+| Prop           | Type                         | Default        | Description                      |
+| -------------- | ---------------------------- | -------------- | -------------------------------- |
+| `value`        | `number \| number[]`         | -              | Controlled value or range.       |
+| `defaultValue` | `number \| number[]`         | `min`          | Initial value when uncontrolled. |
+| `min` / `max`  | `number`                     | `0` / `100`    | Bounds of the track.             |
+| `orientation`  | `"horizontal" \| "vertical"` | `"horizontal"` | Direction of the track.          |
+| `className`    | `string`                     | -              | Adds custom classes to the root. |

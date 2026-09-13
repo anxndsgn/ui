@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { PanelLeft } from "lucide-react";
+import { RiSideBarLine } from "@remixicon/react";
 import { Button } from "registry/default/ui/button";
 import { Separator } from "registry/default/ui/separator";
 
@@ -61,7 +61,7 @@ function DocsSidebarTrigger() {
       aria-expanded={isOpen}
       onClick={open}
     >
-      <PanelLeft size={18} aria-hidden="true" />
+      <RiSideBarLine size={18} aria-hidden="true" />
     </Button>
   );
 }

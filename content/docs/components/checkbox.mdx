@@ -1,0 +1,46 @@
+---
+title: Checkbox
+description: A control for toggling a single boolean value.
+component: Checkbox
+registry: checkbox
+---
+
+import { CheckboxDemo } from "registry/default/examples/checkbox-demo";
+import checkboxDemoSource from "registry/default/examples/checkbox-demo.tsx?raw";
+import CheckboxSource from "registry/default/ui/checkbox.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="checkbox-demo">
+    <CheckboxDemo />
+  </ComponentPreview>
+  <ComponentSource code={checkboxDemoSource} language="tsx" title="checkbox-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/checkbox.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/checkbox.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/checkbox.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={CheckboxSource} language="tsx" title="checkbox.tsx" />
+
+## Props
+
+| Prop              | Type       | Default | Description                              |
+| ----------------- | ---------- | ------- | ---------------------------------------- |
+| `checked`         | `boolean`  | -       | Controlled checked state.                |
+| `defaultChecked`  | `boolean`  | -       | Initial checked state when uncontrolled. |
+| `onCheckedChange` | `function` | -       | Called with the next checked state.      |
+| `className`       | `string`   | -       | Adds custom classes to the checkbox.     |

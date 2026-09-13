@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-demo",
+  "title": "Tabs Demo",
+  "description": "A small usage example for the tabs primitive.",
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tabs-demo.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"../ui/tabs\";\n\nexport function TabsDemo() {\n  return (\n    <Tabs defaultValue=\"account\" className=\"w-full max-w-sm\">\n      <TabsList className=\"w-full\">\n        <TabsTrigger value=\"account\">Account</TabsTrigger>\n        <TabsTrigger value=\"password\">Password</TabsTrigger>\n        <TabsTrigger value=\"team\">Team</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"account\">Manage your account settings here.</TabsContent>\n      <TabsContent value=\"password\">Change your password here.</TabsContent>\n      <TabsContent value=\"team\">Invite and manage teammates here.</TabsContent>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tabs-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

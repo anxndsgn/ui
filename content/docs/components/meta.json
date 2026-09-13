@@ -1,3 +1,24 @@
 {
-  "title": "Components"
+  "title": "Components",
+  "pages": [
+    "alert",
+    "alert-dialog",
+    "button",
+    "card",
+    "checkbox",
+    "context-menu",
+    "dialog",
+    "dropdown-menu",
+    "input",
+    "kbd",
+    "number-field",
+    "popover",
+    "scroll-area",
+    "select",
+    "separator",
+    "slider",
+    "switch",
+    "tabs",
+    "tooltip"
+  ]
 }

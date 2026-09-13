@@ -1,0 +1,45 @@
+---
+title: Kbd
+description: Semantic keyboard shortcuts rendered as keycaps, with a group wrapper.
+component: Kbd
+registry: kbd
+---
+
+import { KbdDemo } from "registry/default/examples/kbd-demo";
+import kbdDemoSource from "registry/default/examples/kbd-demo.tsx?raw";
+import KbdSource from "registry/default/ui/kbd.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="kbd-demo">
+    <KbdDemo />
+  </ComponentPreview>
+  <ComponentSource code={kbdDemoSource} language="tsx" title="kbd-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/kbd.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/kbd.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/kbd.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={KbdSource} language="tsx" title="kbd.tsx" />
+
+## Props
+
+| Prop        | Type     | Default | Description                        |
+| ----------- | -------- | ------- | ---------------------------------- |
+| `className` | `string` | -       | Adds custom classes to the keycap. |
+
+Use `KbdGroup` to lay out several keycaps with consistent spacing.

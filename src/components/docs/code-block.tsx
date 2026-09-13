@@ -1,4 +1,4 @@
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
+import { RiArrowDownSLine, RiArrowUpSLine } from "@remixicon/react";
 import {
   Children,
   isValidElement,
@@ -52,7 +52,7 @@ export function CodeBlock({
   const collapsed = isCollapsible && !expanded;
 
   return (
-    <figure className="m-0 overflow-hidden rounded-lg bg-muted text-foreground">
+    <figure className="m-0 overflow-hidden rounded-lg border! border-border bg-muted text-foreground">
       <figcaption className="flex items-center justify-between border-b border-border p-2 pl-4 text-xs font-bold text-muted-foreground">
         <span>{title ?? dataTitle ?? resolvedLanguage}</span>
         <CopyButton value={source} label="Copy code" />
@@ -94,7 +94,7 @@ export function CodeBlock({
               className="inline-flex items-center gap-1 rounded-sm px-2 py-1 text-xs text-muted-foreground hover:text-foreground"
               onClick={() => setExpanded((value) => !value)}
             >
-              {expanded ? <ChevronUpIcon size={14} /> : <ChevronDownIcon size={14} />}
+              {expanded ? <RiArrowUpSLine size={14} /> : <RiArrowDownSLine size={14} />}
               {expanded ? "Show less" : "Show more"}
             </button>
           </div>

@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Box, Terminal } from "lucide-react";
+import { RiArrowRightLine, RiBookOpenLine, RiBox3Line, RiTerminalLine } from "@remixicon/react";
 import { Button } from "registry/default/ui/button";
 import { SITE_NAME, buildSeoMeta, ogImageUrl } from "../lib/seo";
 
@@ -14,7 +14,7 @@ function HomePage() {
   return (
     <main className="mx-auto flex max-w-5xl flex-col items-center px-4 py-24 text-center max-md:py-16 md:px-0">
       <div className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-        <Box size={20} aria-hidden="true" />
+        <RiBox3Line size={20} aria-hidden="true" />
       </div>
 
       <h1 className="m-0 text-[clamp(2rem,5vw,3rem)] leading-[1.1] font-semibold tracking-tight text-balance">
@@ -33,7 +33,7 @@ function HomePage() {
           render={
             <Link to="/docs/$" params={{ _splat: "components/button" }}>
               Get started
-              <ArrowRight size={15} aria-hidden="true" />
+              <RiArrowRightLine size={15} aria-hidden="true" />
             </Link>
           }
         />
@@ -51,17 +51,17 @@ function HomePage() {
 
       <section className="mt-20 grid w-full grid-cols-3 divide-x-0 rounded-lg bg-muted max-md:grid-cols-1 max-md:divide-y md:divide-x">
         <Feature
-          icon={<BookOpen size={16} aria-hidden="true" />}
+          icon={<RiBookOpenLine size={16} aria-hidden="true" />}
           title="MDX Docs"
           text="Write docs in MDX with frontmatter, live previews, and code tabs."
         />
         <Feature
-          icon={<Terminal size={16} aria-hidden="true" />}
+          icon={<RiTerminalLine size={16} aria-hidden="true" />}
           title="Registry"
           text="Generate shadcn-compatible registry JSON from your components."
         />
         <Feature
-          icon={<Box size={16} aria-hidden="true" />}
+          icon={<RiBox3Line size={16} aria-hidden="true" />}
           title="SSR"
           text="Server-side rendering for your documentation site with Tanstack Start."
         />

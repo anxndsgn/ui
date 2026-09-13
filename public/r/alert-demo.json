@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-demo",
+  "title": "Alert Demo",
+  "description": "A small usage example for the alert primitive.",
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/alert-demo.tsx",
+      "content": "import { Alert, AlertDescription, AlertTitle } from \"../ui/alert\";\n\nexport function AlertDemo() {\n  return (\n    <div className=\"grid w-full max-w-md gap-3\">\n      <Alert>\n        <AlertTitle>Heads up</AlertTitle>\n        <AlertDescription>You can add components to your app from the registry.</AlertDescription>\n      </Alert>\n      <Alert variant=\"warning\">\n        <AlertTitle>Almost there</AlertTitle>\n        <AlertDescription>Your trial ends in three days.</AlertDescription>\n      </Alert>\n      <Alert variant=\"destructive\">\n        <AlertTitle>Something went wrong</AlertTitle>\n        <AlertDescription>Your session has expired. Please sign in again.</AlertDescription>\n      </Alert>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

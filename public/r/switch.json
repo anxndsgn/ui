@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "title": "Switch",
+  "description": "A toggle control for a single setting, with default and small sizes.",
+  "dependencies": [
+    "@base-ui/react/switch"
+  ],
+  "registryDependencies": [
+    "utils",
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/switch.tsx",
+      "content": "import { Switch as SwitchPrimitive } from \"@base-ui/react/switch\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Switch({\n  className,\n  size = \"default\",\n  ...props\n}: SwitchPrimitive.Root.Props & {\n  size?: \"default\" | \"sm\";\n}) {\n  return (\n    <SwitchPrimitive.Root\n      data-slot=\"switch\"\n      data-size={size}\n      className={cn(\n        \"inline-flex shrink-0 cursor-pointer items-center rounded-full bg-input p-0.5 inset-shadow-xs transition-colors outline-none focus-visible:ring-3 focus-visible:ring-ring/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 data-checked:bg-primary data-[size=default]:h-5 data-[size=default]:w-9 data-[size=sm]:h-4 data-[size=sm]:w-7\",\n        className,\n      )}\n      {...props}\n    >\n      <SwitchPrimitive.Thumb\n        data-slot=\"switch-thumb\"\n        className=\"block rounded-full bg-background transition-transform in-data-[size=default]:size-4 in-data-[size=sm]:size-3 in-data-[size=default]:data-checked:translate-x-4 in-data-[size=sm]:data-checked:translate-x-3\"\n      />\n    </SwitchPrimitive.Root>\n  );\n}\n\nexport { Switch };\n",
+      "type": "registry:ui",
+      "target": "components/ui/switch.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

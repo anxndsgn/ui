@@ -1,0 +1,55 @@
+---
+title: Number Field
+description: A numeric input with increment, decrement, and scrub area primitives.
+component: NumberField
+registry: number-field
+---
+
+import { NumberFieldDemo } from "registry/default/examples/number-field-demo";
+import numberFieldDemoSource from "registry/default/examples/number-field-demo.tsx?raw";
+import NumberFieldSource from "registry/default/ui/number-field.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="number-field-demo">
+    <NumberFieldDemo />
+  </ComponentPreview>
+  <ComponentSource code={numberFieldDemoSource} language="tsx" title="number-field-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/number-field.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/number-field.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/number-field.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={NumberFieldSource} language="tsx" title="number-field.tsx" />
+
+## Props
+
+### NumberField
+
+| Prop           | Type                        | Default     | Description                       |
+| -------------- | --------------------------- | ----------- | --------------------------------- |
+| `size`         | `"sm" \| "default" \| "lg"` | `"default"` | Controls the height of the group. |
+| `value`        | `number`                    | -           | Controlled value.                 |
+| `defaultValue` | `number`                    | -           | Initial value when uncontrolled.  |
+| `min` / `max`  | `number`                    | -           | Allowed range.                    |
+| `className`    | `string`                    | -           | Adds custom classes to the root.  |
+
+### NumberFieldScrubArea
+
+| Prop    | Type     | Default | Description                              |
+| ------- | -------- | ------- | ---------------------------------------- |
+| `label` | `string` | -       | Label rendered next to the scrub cursor. |

@@ -1,4 +1,4 @@
-import { CheckIcon, CopyIcon } from "lucide-react";
+import { RiCheckLine, RiFileCopyLine } from "@remixicon/react";
 import { useEffect, useState } from "react";
 import { Button } from "registry/default/ui/button";
 import { cn } from "../../lib/utils";
@@ -34,7 +34,7 @@ export function CopyButton({
         setCopied(true);
       }}
     >
-      <CopyIcon
+      <RiFileCopyLine
         className={cn(
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-[opacity,filter,scale] duration-200 ease-[cubic-bezier(0.2,0,0,1)]",
           copied && "scale-[0.25] opacity-0 blur-xs",
@@ -42,7 +42,7 @@ export function CopyButton({
         size={size}
         aria-hidden="true"
       />
-      <CheckIcon
+      <RiCheckLine
         className={cn(
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-[opacity,filter,scale] duration-200 ease-[cubic-bezier(0.2,0,0,1)]",
           !copied && "scale-[0.25] opacity-0 blur-xs",

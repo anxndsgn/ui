@@ -1,0 +1,47 @@
+---
+title: Switch
+description: A toggle control for a single setting, with default and small sizes.
+component: Switch
+registry: switch
+---
+
+import { SwitchDemo } from "registry/default/examples/switch-demo";
+import switchDemoSource from "registry/default/examples/switch-demo.tsx?raw";
+import SwitchSource from "registry/default/ui/switch.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="switch-demo">
+    <SwitchDemo />
+  </ComponentPreview>
+  <ComponentSource code={switchDemoSource} language="tsx" title="switch-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/switch.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/switch.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/switch.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={SwitchSource} language="tsx" title="switch.tsx" />
+
+## Props
+
+| Prop              | Type                | Default     | Description                              |
+| ----------------- | ------------------- | ----------- | ---------------------------------------- |
+| `size`            | `"default" \| "sm"` | `"default"` | Controls the track and thumb size.       |
+| `checked`         | `boolean`           | -           | Controlled checked state.                |
+| `defaultChecked`  | `boolean`           | -           | Initial checked state when uncontrolled. |
+| `onCheckedChange` | `function`          | -           | Called with the next checked state.      |
+| `className`       | `string`            | -           | Adds custom classes to the switch.       |

@@ -1,0 +1,44 @@
+---
+title: Input
+description: A single-line text input with focus and invalid states.
+component: Input
+registry: input
+---
+
+import { InputDemo } from "registry/default/examples/input-demo";
+import inputDemoSource from "registry/default/examples/input-demo.tsx?raw";
+import InputSource from "registry/default/ui/input.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="input-demo">
+    <InputDemo />
+  </ComponentPreview>
+  <ComponentSource code={inputDemoSource} language="tsx" title="input-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/input.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/input.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/input.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={InputSource} language="tsx" title="input.tsx" />
+
+## Props
+
+| Prop        | Type     | Default  | Description                       |
+| ----------- | -------- | -------- | --------------------------------- |
+| `type`      | `string` | `"text"` | Native input type.                |
+| `className` | `string` | -        | Adds custom classes to the input. |

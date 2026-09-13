@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-field-demo",
+  "title": "Number Field Demo",
+  "description": "A small usage example for the number field primitive.",
+  "registryDependencies": [
+    "number-field"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/number-field-demo.tsx",
+      "content": "import {\n  NumberField,\n  NumberFieldDecrement,\n  NumberFieldGroup,\n  NumberFieldIncrement,\n  NumberFieldInput,\n  NumberFieldScrubArea,\n} from \"../ui/number-field\";\n\nexport function NumberFieldDemo() {\n  return (\n    <NumberField defaultValue={12} min={0} max={100} className=\"w-52\">\n      <NumberFieldScrubArea label=\"Quantity\" />\n      <NumberFieldGroup>\n        <NumberFieldDecrement />\n        <NumberFieldInput />\n        <NumberFieldIncrement />\n      </NumberFieldGroup>\n    </NumberField>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/number-field-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

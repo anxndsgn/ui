@@ -34,6 +34,7 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "A compact button primitive with variant and size props.",
+      "dependencies": ["@base-ui/react/button", "class-variance-authority"],
       "files": [
         {
           "path": "registry/default/ui/button.tsx",
@@ -62,7 +63,7 @@
       "type": "registry:ui",
       "title": "Dropdown Menu",
       "description": "A floating menu surfaced from a trigger button with items, groups, and submenus.",
-      "dependencies": ["@base-ui/react/menu", "lucide-react"],
+      "dependencies": ["@base-ui/react/menu", "@remixicon/react"],
       "files": [
         {
           "path": "registry/default/ui/dropdown-menu.tsx",
@@ -120,7 +121,7 @@
       "type": "registry:ui",
       "title": "Select",
       "description": "A select dropdown with trigger, content, items, and grouping primitives.",
-      "dependencies": ["@base-ui/react/select", "lucide-react"],
+      "dependencies": ["@base-ui/react/select", "@remixicon/react"],
       "files": [
         {
           "path": "registry/default/ui/select.tsx",
@@ -170,6 +171,409 @@
           "path": "registry/default/examples/separator-demo.tsx",
           "type": "registry:component",
           "target": "components/separator-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "A callout for displaying short messages with default, warning, and destructive variants.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/default/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "alert-demo",
+      "type": "registry:component",
+      "title": "Alert Demo",
+      "description": "A small usage example for the alert primitive.",
+      "registryDependencies": ["alert"],
+      "files": [
+        {
+          "path": "registry/default/examples/alert-demo.tsx",
+          "type": "registry:component",
+          "target": "components/alert-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts the user with a confirmation before proceeding.",
+      "dependencies": ["@base-ui/react/alert-dialog"],
+      "files": [
+        {
+          "path": "registry/default/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"]
+    },
+    {
+      "name": "alert-dialog-demo",
+      "type": "registry:component",
+      "title": "Alert Dialog Demo",
+      "description": "A small usage example for the alert dialog primitive.",
+      "registryDependencies": ["alert-dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/examples/alert-dialog-demo.tsx",
+          "type": "registry:component",
+          "target": "components/alert-dialog-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "A surface with header, content, and footer regions for grouping related content.",
+      "files": [
+        {
+          "path": "registry/default/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "card-demo",
+      "type": "registry:component",
+      "title": "Card Demo",
+      "description": "A small usage example for the card primitive.",
+      "registryDependencies": ["card", "button", "input"],
+      "files": [
+        {
+          "path": "registry/default/examples/card-demo.tsx",
+          "type": "registry:component",
+          "target": "components/card-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A control for toggling a single boolean value.",
+      "dependencies": ["@base-ui/react/checkbox", "@remixicon/react"],
+      "files": [
+        {
+          "path": "registry/default/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:component",
+      "title": "Checkbox Demo",
+      "description": "A small usage example for the checkbox primitive.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "registry/default/examples/checkbox-demo.tsx",
+          "type": "registry:component",
+          "target": "components/checkbox-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "A menu that appears on right click with items, groups, and submenus.",
+      "dependencies": ["@base-ui/react/context-menu", "@remixicon/react"],
+      "files": [
+        {
+          "path": "registry/default/ui/context-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "context-menu-demo",
+      "type": "registry:component",
+      "title": "Context Menu Demo",
+      "description": "A small usage example for the context menu primitive.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "registry/default/examples/context-menu-demo.tsx",
+          "type": "registry:component",
+          "target": "components/context-menu-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A modal window with overlay, header, footer, and close affordances.",
+      "dependencies": ["@base-ui/react/dialog", "@remixicon/react"],
+      "files": [
+        {
+          "path": "registry/default/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme", "button"]
+    },
+    {
+      "name": "dialog-demo",
+      "type": "registry:component",
+      "title": "Dialog Demo",
+      "description": "A small usage example for the dialog primitive.",
+      "registryDependencies": ["dialog", "button", "input"],
+      "files": [
+        {
+          "path": "registry/default/examples/dialog-demo.tsx",
+          "type": "registry:component",
+          "target": "components/dialog-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "A single-line text input with focus and invalid states.",
+      "files": [
+        {
+          "path": "registry/default/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "input-demo",
+      "type": "registry:component",
+      "title": "Input Demo",
+      "description": "A small usage example for the input primitive.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "registry/default/examples/input-demo.tsx",
+          "type": "registry:component",
+          "target": "components/input-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Semantic keyboard shortcuts rendered as keycaps, with a group wrapper.",
+      "files": [
+        {
+          "path": "registry/default/ui/kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "kbd-demo",
+      "type": "registry:component",
+      "title": "Kbd Demo",
+      "description": "A small usage example for the kbd primitive.",
+      "registryDependencies": ["kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/kbd-demo.tsx",
+          "type": "registry:component",
+          "target": "components/kbd-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "A numeric input with increment, decrement, and scrub area primitives.",
+      "dependencies": ["@base-ui/react/number-field", "@remixicon/react"],
+      "files": [
+        {
+          "path": "registry/default/ui/number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/number-field.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "number-field-demo",
+      "type": "registry:component",
+      "title": "Number Field Demo",
+      "description": "A small usage example for the number field primitive.",
+      "registryDependencies": ["number-field"],
+      "files": [
+        {
+          "path": "registry/default/examples/number-field-demo.tsx",
+          "type": "registry:component",
+          "target": "components/number-field-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "A floating panel anchored to a trigger, with title and description primitives.",
+      "dependencies": ["@base-ui/react/popover"],
+      "files": [
+        {
+          "path": "registry/default/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "popover-demo",
+      "type": "registry:component",
+      "title": "Popover Demo",
+      "description": "A small usage example for the popover primitive.",
+      "registryDependencies": ["popover", "button", "input"],
+      "files": [
+        {
+          "path": "registry/default/examples/popover-demo.tsx",
+          "type": "registry:component",
+          "target": "components/popover-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "A draggable control for choosing one or more values in a range.",
+      "dependencies": ["@base-ui/react/slider"],
+      "files": [
+        {
+          "path": "registry/default/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "slider-demo",
+      "type": "registry:component",
+      "title": "Slider Demo",
+      "description": "A small usage example for the slider primitive.",
+      "registryDependencies": ["slider"],
+      "files": [
+        {
+          "path": "registry/default/examples/slider-demo.tsx",
+          "type": "registry:component",
+          "target": "components/slider-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A toggle control for a single setting, with default and small sizes.",
+      "dependencies": ["@base-ui/react/switch"],
+      "files": [
+        {
+          "path": "registry/default/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "switch-demo",
+      "type": "registry:component",
+      "title": "Switch Demo",
+      "description": "A small usage example for the switch primitive.",
+      "registryDependencies": ["switch"],
+      "files": [
+        {
+          "path": "registry/default/examples/switch-demo.tsx",
+          "type": "registry:component",
+          "target": "components/switch-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs with default and line variants, an animated indicator, and content panels.",
+      "dependencies": ["@base-ui/react/tabs", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/default/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "tabs-demo",
+      "type": "registry:component",
+      "title": "Tabs Demo",
+      "description": "A small usage example for the tabs primitive.",
+      "registryDependencies": ["tabs"],
+      "files": [
+        {
+          "path": "registry/default/examples/tabs-demo.tsx",
+          "type": "registry:component",
+          "target": "components/tabs-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A hover label anchored to a trigger, with provider, viewport, and arrow primitives.",
+      "dependencies": ["@base-ui/react/tooltip"],
+      "files": [
+        {
+          "path": "registry/default/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ],
+      "registryDependencies": ["utils", "theme"]
+    },
+    {
+      "name": "tooltip-demo",
+      "type": "registry:component",
+      "title": "Tooltip Demo",
+      "description": "A small usage example for the tooltip primitive.",
+      "registryDependencies": ["tooltip", "button", "kbd"],
+      "files": [
+        {
+          "path": "registry/default/examples/tooltip-demo.tsx",
+          "type": "registry:component",
+          "target": "components/tooltip-demo.tsx"
         }
       ]
     }

@@ -1,0 +1,49 @@
+---
+title: Popover
+description: A floating panel anchored to a trigger, with title and description primitives.
+component: Popover
+registry: popover
+---
+
+import { PopoverDemo } from "registry/default/examples/popover-demo";
+import popoverDemoSource from "registry/default/examples/popover-demo.tsx?raw";
+import PopoverSource from "registry/default/ui/popover.tsx?raw";
+
+## Preview
+
+<ComponentTabs>
+  <ComponentPreview name="popover-demo">
+    <PopoverDemo />
+  </ComponentPreview>
+  <ComponentSource code={popoverDemoSource} language="tsx" title="popover-demo.tsx" />
+</ComponentTabs>
+
+## Installation
+
+<CodeSnippet>
+  <CodeSnippet.Command value="pnpm">
+    pnpm dlx shadcn@latest add http://localhost:3000/r/popover.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="npm">
+    npx shadcn@latest add http://localhost:3000/r/popover.json
+  </CodeSnippet.Command>
+  <CodeSnippet.Command value="bun">
+    bunx shadcn@latest add http://localhost:3000/r/popover.json
+  </CodeSnippet.Command>
+</CodeSnippet>
+
+## Source
+
+<ComponentSource code={PopoverSource} language="tsx" title="popover.tsx" />
+
+## Props
+
+### PopoverContent
+
+| Prop          | Type                                     | Default    | Description                            |
+| ------------- | ---------------------------------------- | ---------- | -------------------------------------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"` | `"bottom"` | Preferred side of the trigger.         |
+| `sideOffset`  | `number`                                 | `6`        | Pixel offset from the trigger.         |
+| `align`       | `"start" \| "center" \| "end"`           | `"center"` | Alignment relative to the trigger.     |
+| `alignOffset` | `number`                                 | `0`        | Pixel offset along the alignment axis. |
+| `className`   | `string`                                 | -          | Adds custom classes to the popup.      |

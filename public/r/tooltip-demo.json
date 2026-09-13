@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-demo",
+  "title": "Tooltip Demo",
+  "description": "A small usage example for the tooltip primitive.",
+  "registryDependencies": [
+    "tooltip",
+    "button",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "registry/default/examples/tooltip-demo.tsx",
+      "content": "import { Button } from \"../ui/button\";\nimport { Kbd } from \"../ui/kbd\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n  TooltipViewport,\n} from \"../ui/tooltip\";\n\nexport function TooltipDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger render={<Button variant=\"outline\">Hover me</Button>} />\n        <TooltipContent>\n          <TooltipViewport>\n            Add to library\n            <Kbd>⌘K</Kbd>\n          </TooltipViewport>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tooltip-demo.tsx"
+    }
+  ],
+  "type": "registry:component"
+}
